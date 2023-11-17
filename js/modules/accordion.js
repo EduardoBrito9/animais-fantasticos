@@ -3,7 +3,6 @@ export default class Accordion {
     this.accordionlist = document.querySelectorAll(elem);
     this.ativoClass = name;
     this.activeaccordion = this.activeaccordion.bind(this);
-    console.log(this.activeaccordion);
   }
 
   activeaccordion(event) {
