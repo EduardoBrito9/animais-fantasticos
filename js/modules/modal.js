@@ -26,5 +26,6 @@ export default class Modal {
       this.botaoFechar.addEventListener("click", this.toggleModal);
       this.containerModal.addEventListener("click", this.cliqueForaModal);
     }
+    return this;
   }
 }
