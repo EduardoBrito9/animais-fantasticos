@@ -1,4 +1,5 @@
 export default function FetchBitcoin(url, target) {
+  console.log('clone')
   fetch(url)
     .then(response => response.json())
     .then((bitcoin) => {
