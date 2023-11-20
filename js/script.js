@@ -9,22 +9,32 @@ import initFuncionamento from "./modules/funcionamento.js";
 import initFetchAnimais from "./modules/fetch-animais.js";
 import initFetchBitcoin from "./modules/fetch-bitcoin.js";
 import initAnimacaoScroll from "./modules/scroll-animacao.js";
+import AnimaNumeros from "./modules/anima-numeros.js";
 
 const scrollsuave = new ScrollSuave('[data-menu="suave"] a[href^="#"]');
 scrollsuave.init();
 
-const acd = new Accordion('[data-anime="accordion"] dt', 'ativo');
+const acd = new Accordion('[data-anime="accordion"] dt', "ativo");
 acd.init2();
 
-const tabetter = new TabNav('[data-tab="menu"] li', '[data-tab="content"] section');
+const tabetter = new TabNav(
+  '[data-tab="menu"] li',
+  '[data-tab="content"] section',
+);
 tabetter.init99();
 
-const mod = new Modal('[data-modal="abrir"]', '[data-modal="fechar"]', '[data-modal="container"]');
+const mod = new Modal(
+  '[data-modal="abrir"]',
+  '[data-modal="fechar"]',
+  '[data-modal="container"]',
+);
 mod.init();
 
 const tool = new Tooltip("[data-tooltip]");
 tool.init();
 
+const anima = new AnimaNumeros("[data-numero]", 'ativo', '.numeros');
+anima.init();
 initDropdownMenu();
 initMenuMobile();
 initFuncionamento();
