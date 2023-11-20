@@ -9,7 +9,6 @@ export default class Modal {
 
   toggleModal(event) {
     event.preventDefault();
-    console.log(this);
     this.containerModal.classList.toggle("ativo");
   }
 
@@ -21,7 +20,6 @@ export default class Modal {
 
   init() {
     if (this.botaoAbrir && this.botaoFechar && this.containerModal) {
-      console.log(this.botaoAbrir, this.botaoFechar, this.containerModal);
       this.botaoAbrir.addEventListener("click", this.toggleModal);
       this.botaoFechar.addEventListener("click", this.toggleModal);
       this.containerModal.addEventListener("click", this.cliqueForaModal);
