@@ -1,8 +1,10 @@
+import debounce from "./debounce.js";
+
 export default class ScrollAnima {
   constructor(sections) {
     this.sections = document.querySelectorAll(sections);
     this.windowMetade = window.innerHeight * 0.6;
-    this.checkDistance = this.checkDistance.bind(this);
+    this.checkDistance = debounce(this.checkDistance.bind(this), 50);
   }
   //pega a distancia de cada item em relacao ao top do site
 
@@ -14,12 +16,14 @@ export default class ScrollAnima {
         offset: Math.floor(offset - this.windowMetade),
       };
     });
-    console.log(this.distance);
+    // console.log(this.distance);
   }
 
   //verifica a distancia de cada objeto em relacao ao scroll do site
   checkDistance() {
+    console.log("vezes");
     this.distance.forEach((ss) => {
+      // console.log(window.scrollY, ss.offset);
       if (window.scrollY > ss.offset) {
         ss.element.classList.add("ativo");
       } else if (ss.element.classList.contains("ativo")) {
