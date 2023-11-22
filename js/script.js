@@ -52,4 +52,5 @@ const menumobile = new MenuMobile(
 menumobile.init();
 
 const func = new Funcionamento("[data-semana]", "aberto");
+console.log(func);
 func.init();
