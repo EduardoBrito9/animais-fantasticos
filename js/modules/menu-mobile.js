@@ -2,9 +2,9 @@ import outsideClick from "./outsideclick.js";
 
 export default class MenuMobile {
   constructor(container, botao, lista, eventos, classe) {
+    this.menu = document.querySelector(container);
     this.menuButton = document.querySelector(botao);
     this.menuList = document.querySelector(lista);
-    this.menu = document.querySelector(container);
     this.eventos = eventos;
     this.className = classe;
     this.openMenu = this.openMenu.bind(this);
@@ -30,8 +30,10 @@ export default class MenuMobile {
   }
 
   init() {
-    console.log(this.menuButton, this.className, this.eventos, this.menuList);
-    this.addevent();
+    if ((this.menuButton, this.className, this.eventos, this.menuList)) {
+      this.addevent();
+    }
+
     return this;
   }
 }
