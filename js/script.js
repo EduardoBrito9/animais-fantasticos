@@ -32,7 +32,7 @@ mod.init();
 const tool = new Tooltip("[data-tooltip]");
 tool.init();
 
-fetchAnimais("../../animaisapi.json", ".numeros-grid");
+fetchAnimais("./animaisapi.json", ".numeros-grid");
 
 FetchBitcoin("https://blockchain.info/ticker", ".btc-preco");
 
